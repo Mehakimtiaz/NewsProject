@@ -6,5 +6,6 @@ export default defineNuxtConfig({
       newsApiBase: 'https://newsdata.io/api/1'
     }
   },
-  devtools: { enabled: true }
+  devtools: { enabled: false },
+  css: ['@/assets/css/main.css'],
 })
