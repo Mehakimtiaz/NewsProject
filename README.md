@@ -2,6 +2,10 @@
 
 npm install
 
+## ENV variables
+
+create env file for reference check env.example file
+
 ## Run
 
 npm run dev
