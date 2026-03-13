@@ -23,3 +23,12 @@ npm run build
 ## API
 
 NewsData.io API
+
+# Run all tests once
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Check test coverage
+npm run test:coverage
