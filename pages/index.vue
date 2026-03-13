@@ -7,7 +7,6 @@ import Pagination from '~/components/Pagination.vue'
 const { fetchNews } = useNewsApi()
 const route = useRoute()
 const router = useRouter()
-// const nuxtApp = useNuxtApp() // Added for cache handling
 
 const pageHistory = ref<string[]>([])
 
@@ -28,7 +27,6 @@ watch(
 
 const fetchKey = computed(() => `news-page-${pageToken.value}`)
 
-// FIXED: Added getCachedData to prevent the "Double Call" 429 error
 const { data, pending, error } = await useAsyncData(
   fetchKey.value, 
   () => fetchNews(pageToken.value),
@@ -42,7 +40,7 @@ const articles = computed(() => data.value?.results || [])
 
 const goPrev = () => {
   if (pageHistory.length > 1) {
-    pageHistory.value.pop() // remove current token
+    pageHistory.value.pop()
     const prevToken = pageHistory.value[pageHistory.value.length - 1]
     router.push({ query: { page: prevToken } })
   }

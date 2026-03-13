@@ -5,7 +5,6 @@ export default defineVitestConfig({
   test: {
     environment: 'nuxt',
     globals: true,
-    // Add this to help Vitest resolve aliases
     alias: {
       '@': path.resolve(__dirname, './'),
       '~': path.resolve(__dirname, './')

@@ -1,4 +1,3 @@
-import { fileURLToPath } from 'node:url'
 import { describe, it, expect } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import Pagination from '@/components/Pagination.vue'
@@ -14,8 +13,6 @@ describe('Pagination Component', () => {
 
     const nextButton = component.find('button:last-child')
     await nextButton.trigger('click')
-
-    // Check if the event was emitted
     expect(component.emitted()).toHaveProperty('next')
   })
 

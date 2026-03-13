@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
   const query = getQuery(event)
 
   try {
-    return await $fetch('https://newsdata.io/api/1/latest', {
+    return await $fetch(config.public.newsApiBase, {
       params: {
         apikey: config.public.newsApiKey,
         page: query.page,
@@ -12,7 +12,6 @@ export default defineEventHandler(async (event) => {
       }
     })
   } catch (error: any) {
-    // If the external API is dead, return an empty structure so the app doesn't crash
     return { results: [], nextPage: null, status: 'error' }
   }
 })

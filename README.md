@@ -1,5 +1,3 @@
-# Nuxt News Website
-
 ## Setup
 
 npm install

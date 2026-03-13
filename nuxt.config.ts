@@ -1,9 +1,8 @@
-// nuxt.config.ts
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      newsApiKey: 'pub_53dd73b15efc4cd3a6427dd755cca668',
-      newsApiBase: 'https://newsdata.io/api/1'
+      newsApiKey: process.env.NEWS_API_KEY,
+      newsApiBase: process.env.NEWS_API || 'https://newsdata.io/api/1/latest'
     }
   },
   devtools: { enabled: false },

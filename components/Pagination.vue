@@ -35,22 +35,17 @@ defineEmits(['prev', 'next'])
   margin-bottom: 20px;
 }
 .pagination-btn {
-  /* Layout */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 80px;
   padding: 8px 16px;
-  
-  /* Typography */
   font-size: 16px;
   font-weight: 500;
   color: #111827;
-  
-  /* Styling */
   background-color: #ffffff;
   border: 1px solid #d1d5db;
-  border-radius: 4px; /* Matches the slightly sharp corners in your image */
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
 }

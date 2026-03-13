@@ -5,8 +5,9 @@ node_modules/
 .nuxt/
 .output/
 dist/
+coverage
 
-# Environment variables (Crucial for security!)
+# Environment variables
 .env
 
 # Logs

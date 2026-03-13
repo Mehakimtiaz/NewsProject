@@ -3,7 +3,6 @@ export interface NewsArticle {
   title: string;
   description: string;
   image_url: string | null;
-  link: string;
 }
 
 export interface NewsApiResponse {
